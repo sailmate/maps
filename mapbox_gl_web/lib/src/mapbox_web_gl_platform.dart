@@ -571,6 +571,11 @@ class MapboxWebGlPlatform extends MapboxGlPlatform
   }
 
   @override
+  Future<void> restartLocationUpdates() {
+    throw Exception('restartLocationUpdates not available in web');
+  }
+
+  @override
   void setCompassEnabled(bool compassEnabled) {
     _updateNavigationControl(compassEnabled: compassEnabled);
   }

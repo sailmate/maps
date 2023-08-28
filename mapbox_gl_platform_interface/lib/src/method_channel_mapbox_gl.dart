@@ -129,6 +129,11 @@ class MethodChannelMapboxGl extends MapboxGlPlatform {
   }
 
   @override
+  Future<void> restartLocationUpdates() async {
+    await _channel.invokeMethod('locationComponent#restart');
+  }
+
+  @override
   Future<void> initPlatform(int id) async {
     _channel = MethodChannel('plugins.flutter.io/mapbox_maps_$id');
     _channel.setMethodCallHandler(_handleMethodCall);
