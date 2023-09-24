@@ -574,6 +574,14 @@ class MapboxWebGlPlatform extends MapboxGlPlatform
   Future<void> restartLocationUpdates() {
     throw Exception('restartLocationUpdates not available in web');
   }
+  @override
+  Future<void> stopLocationUpdates() {
+    throw Exception('stopLocationUpdates not available in web');
+  }
+  @override
+  Future<void> startLocationUpdates() {
+    throw Exception('startLocationUpdates not available in web');
+  }
 
   @override
   void setCompassEnabled(bool compassEnabled) {
